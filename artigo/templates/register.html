@@ -1,0 +1,74 @@
+{% extends 'menu.html' %}
+
+{% block content %}
+<main>
+    <style>
+        /* Estilos da página de registro */
+        main {
+            padding: 2rem;
+        }
+        .auth-container {
+            background-color: #fff;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        .auth-container h2 {
+            margin-bottom: 1.5rem;
+            color: #333;
+        }
+        .auth-container label {
+            display: block;
+            text-align: left;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+        .auth-container input[type="text"],
+        .auth-container input[type="password"],
+        .auth-container input[type="email"] {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            margin-bottom: 1rem;
+        }
+        .auth-container button {
+            background-color: #007bff;
+            color: white;
+            padding: 0.75rem;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1rem;
+            width: 100%;
+        }
+        .auth-container button:hover {
+            background-color: #0056b3;
+        }
+        .auth-container p {
+            margin-top: 1rem;
+            color: #333;
+        }
+        .auth-container a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        .auth-container a:hover {
+            text-decoration: underline;
+        }
+    </style>
+
+    <section class="auth-container">
+        <h2>Registrar Novo Usuário</h2>
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Registrar</button>
+        </form>
+        <p>Já possui uma conta? <a href="{% url 'login' %}">Faça login</a></p>
+    </section>
+</main>
+{% endblock %}

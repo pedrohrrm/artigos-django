@@ -1,0 +1,144 @@
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 5375
+"POST /artigo/logout/ HTTP/1.1" 302 0
+"GET /artigo/login/ HTTP/1.1" 200 5196
+"GET / HTTP/1.1" 200 5064
+"GET /artigo/criar/ HTTP/1.1" 302 0
+"GET /artigo/login/?next=/artigo/criar/ HTTP/1.1" 200 5196
+"GET / HTTP/1.1" 200 5064
+"GET /artigo/lista_artigos/ HTTP/1.1" 302 0
+"GET /artigo/login/?next=/artigo/lista_artigos/ HTTP/1.1" 200 5196
+"GET / HTTP/1.1" 200 5064
+"GET /artigo/lista_artigos/ HTTP/1.1" 302 0
+"GET /artigo/login/?next=/artigo/lista_artigos/ HTTP/1.1" 200 5196
+"GET / HTTP/1.1" 200 5064
+"GET /artigo/lista_artigos/ HTTP/1.1" 302 0
+"GET /artigo/login/?next=/artigo/lista_artigos/ HTTP/1.1" 200 5196
+"GET / HTTP/1.1" 200 5064
+"GET /artigo/login/ HTTP/1.1" 200 5196
+"POST /artigo/login/ HTTP/1.1" 302 0
+"GET /artigo/ HTTP/1.1" 200 5379
+Forbidden (Permission denied): /artigo/criar/
+Traceback (most recent call last):
+  File "/home/gustavo-vaz/Downloads/TP SD/Artigos-django/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gustavo-vaz/Downloads/TP SD/Artigos-django/venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gustavo-vaz/Downloads/TP SD/Artigos-django/venv/lib/python3.12/site-packages/django/contrib/auth/decorators.py", line 60, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gustavo-vaz/Downloads/TP SD/Artigos-django/venv/lib/python3.12/site-packages/django/contrib/auth/decorators.py", line 57, in _view_wrapper
+    test_pass = test_func(request.user)
+                ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gustavo-vaz/Downloads/TP SD/Artigos-django/venv/lib/python3.12/site-packages/django/contrib/auth/decorators.py", line 130, in check_perms
+    raise PermissionDenied
+django.core.exceptions.PermissionDenied
+"GET /artigo/criar/ HTTP/1.1" 403 135
+Forbidden (Permission denied): /admin/auth/user/4/change/
+Traceback (most recent call last):
+  File "/home/gustavo-vaz/Downloads/TP SD/Artigos-django/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gustavo-vaz/Downloads/TP SD/Artigos-django/venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gustavo-vaz/Downloads/TP SD/Artigos-django/venv/lib/python3.12/site-packages/django/contrib/admin/options.py", line 718, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gustavo-vaz/Downloads/TP SD/Artigos-django/venv/lib/python3.12/site-packages/django/utils/decorators.py", line 188, in _view_wrapper
+    result = _process_exception(request, e)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gustavo-vaz/Downloads/TP SD/Artigos-django/venv/lib/python3.12/site-packages/django/utils/decorators.py", line 186, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gustavo-vaz/Downloads/TP SD/Artigos-django/venv/lib/python3.12/site-packages/django/views/decorators/cache.py", line 80, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gustavo-vaz/Downloads/TP SD/Artigos-django/venv/lib/python3.12/site-packages/django/contrib/admin/sites.py", line 241, in inner
+    return view(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gustavo-vaz/Downloads/TP SD/Artigos-django/venv/lib/python3.12/site-packages/django/contrib/admin/options.py", line 1964, in change_view
+    return self.changeform_view(request, object_id, form_url, extra_context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gustavo-vaz/Downloads/TP SD/Artigos-django/venv/lib/python3.12/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gustavo-vaz/Downloads/TP SD/Artigos-django/venv/lib/python3.12/site-packages/django/utils/decorators.py", line 188, in _view_wrapper
+    result = _process_exception(request, e)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gustavo-vaz/Downloads/TP SD/Artigos-django/venv/lib/python3.12/site-packages/django/utils/decorators.py", line 186, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gustavo-vaz/Downloads/TP SD/Artigos-django/venv/lib/python3.12/site-packages/django/contrib/admin/options.py", line 1820, in changeform_view
+    return self._changeform_view(request, object_id, form_url, extra_context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gustavo-vaz/Downloads/TP SD/Artigos-django/venv/lib/python3.12/site-packages/django/contrib/admin/options.py", line 1847, in _changeform_view
+    raise PermissionDenied
+django.core.exceptions.PermissionDenied
+"GET /admin/auth/user/4/change/ HTTP/1.1" 403 135
+Forbidden (Permission denied): /admin/auth/user/
+Traceback (most recent call last):
+  File "/home/gustavo-vaz/Downloads/TP SD/Artigos-django/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gustavo-vaz/Downloads/TP SD/Artigos-django/venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gustavo-vaz/Downloads/TP SD/Artigos-django/venv/lib/python3.12/site-packages/django/contrib/admin/options.py", line 718, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gustavo-vaz/Downloads/TP SD/Artigos-django/venv/lib/python3.12/site-packages/django/utils/decorators.py", line 188, in _view_wrapper
+    result = _process_exception(request, e)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gustavo-vaz/Downloads/TP SD/Artigos-django/venv/lib/python3.12/site-packages/django/utils/decorators.py", line 186, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gustavo-vaz/Downloads/TP SD/Artigos-django/venv/lib/python3.12/site-packages/django/views/decorators/cache.py", line 80, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gustavo-vaz/Downloads/TP SD/Artigos-django/venv/lib/python3.12/site-packages/django/contrib/admin/sites.py", line 241, in inner
+    return view(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gustavo-vaz/Downloads/TP SD/Artigos-django/venv/lib/python3.12/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gustavo-vaz/Downloads/TP SD/Artigos-django/venv/lib/python3.12/site-packages/django/utils/decorators.py", line 188, in _view_wrapper
+    result = _process_exception(request, e)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gustavo-vaz/Downloads/TP SD/Artigos-django/venv/lib/python3.12/site-packages/django/utils/decorators.py", line 186, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gustavo-vaz/Downloads/TP SD/Artigos-django/venv/lib/python3.12/site-packages/django/contrib/admin/options.py", line 1998, in changelist_view
+    raise PermissionDenied
+django.core.exceptions.PermissionDenied
+"GET /admin/auth/user/ HTTP/1.1" 403 135
+"GET /admin/ HTTP/1.1" 200 4577
+"GET /static/admin/css/dashboard.css HTTP/1.1" 304 0
+"POST /artigo/logout/ HTTP/1.1" 302 0
+"GET /artigo/login/ HTTP/1.1" 200 5196
+"POST /artigo/login/ HTTP/1.1" 302 0
+"GET /artigo/ HTTP/1.1" 200 5375
+"GET /admin/ HTTP/1.1" 200 8672
+"GET /static/admin/img/icon-changelink.svg HTTP/1.1" 304 0
+"GET /admin/auth/user/ HTTP/1.1" 200 14941
+"GET /static/admin/css/changelists.css HTTP/1.1" 304 0
+"GET /static/admin/img/icon-yes.svg HTTP/1.1" 304 0
+"GET /admin/jsi18n/ HTTP/1.1" 200 8959
+"GET /static/admin/js/filters.js HTTP/1.1" 304 0
+"GET /static/admin/img/tooltag-add.svg HTTP/1.1" 304 0
+"GET /static/admin/img/sorting-icons.svg HTTP/1.1" 304 0
+"GET /static/admin/img/icon-viewlink.svg HTTP/1.1" 304 0
+"GET /admin/auth/user/5/change/ HTTP/1.1" 200 24791
+"GET /admin/jsi18n/ HTTP/1.1" 200 8959
+"GET /admin/auth/user/ HTTP/1.1" 200 14941
+"GET /admin/auth/user/4/change/ HTTP/1.1" 200 24799
+"GET /admin/jsi18n/ HTTP/1.1" 200 8959
+"POST /admin/auth/user/4/change/ HTTP/1.1" 302 0
+"GET /admin/auth/user/ HTTP/1.1" 200 15142
+"GET /admin/jsi18n/ HTTP/1.1" 200 8959
+"GET /artigo/criar/ HTTP/1.1" 200 6804
+"POST /artigo/criar/ HTTP/1.1" 302 0
+"GET /artigo/lista_artigos/ HTTP/1.1" 200 10575
+/home/gustavo-vaz/Downloads/TP SD/Artigos-django/Artigos/settings.py changed, reloading.

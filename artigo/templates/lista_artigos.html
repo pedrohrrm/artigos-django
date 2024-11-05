@@ -1,0 +1,219 @@
+{% extends 'menu.html' %}
+
+{% block content %}
+<main>
+    <style>
+        /* styles.css */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 1rem;
+            text-align: center;
+        }
+        main {
+            padding: 2rem;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 1rem;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+        th, td {
+            padding: 0.75rem;
+            text-align: left;
+        }
+        th {
+            background-color: #f4f4f4;
+            font-weight: bold;
+        }
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: bold;
+        }
+        input[type="text"],
+        input[type="number"],
+        textarea,
+        input[type="date"],
+        select {
+            width: 100%;
+            padding: 0.5rem;
+            margin-bottom: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        textarea {
+            height: 100px;
+        }
+        button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 0.75rem 1.5rem;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        footer {
+            text-align: center;
+            padding: 1rem;
+            background-color: #333;
+            color: #fff;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+        a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .pagination {
+            display: flex;
+            justify-content: center;
+            margin: 1rem 0;
+        }
+        .pagination a {
+            margin: 0 0.25rem;
+            padding: 0.5rem 1rem;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+        }
+        .pagination a:hover {
+            background-color: #0056b3;
+        }
+        .pagination .current {
+            background-color: #0056b3;
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+        }
+    </style>
+
+<section id="busca_artigos">
+    <h1>Buscar Artigos</h1>
+    <form method="get" action="{% url 'busca_artigos' %}">
+        <label for="criterio">Buscar por:</label>
+        <select name="criterio" id="criterio" onchange="mostrarCampo()">
+            <option value="">Selecione um critério</option>
+            <option value="titulo" {% if filtros.criterio == 'titulo' %}selected{% endif %}>Título</option>
+            <option value="autores" {% if filtros.criterio == 'autores' %}selected{% endif %}>Autor</option>
+            <option value="revista" {% if filtros.criterio == 'revista' %}selected{% endif %}>Revista</option>
+            <option value="palavras_chave" {% if filtros.criterio == 'palavras_chave' %}selected{% endif %}>Palavra-chave</option>
+            <option value="data" {% if filtros.criterio == 'data' %}selected{% endif %}>Data</option>
+            <option value="resumo" {% if filtros.criterio == 'resumo' %}selected{% endif %}>Resumo</option>
+        </select>
+
+        <div id="campo_criterio">
+            {% if filtros %}
+                {% if filtros.criterio == 'titulo' %}
+                    <label for="titulo">Título:</label>
+                    <input type="text" name="titulo" id="titulo" value="{{ filtros.titulo }}" placeholder="Título">
+                {% elif filtros.criterio == 'autores' %}
+                    <label for="autores">Autor:</label>
+                    <input type="text" name="autores" id="autores" value="{{ filtros.autores }}" placeholder="Autor">
+                {% elif filtros.criterio == 'revista' %}
+                    <label for="revista">Revista:</label>
+                    <input type="text" name="revista" id="revista" value="{{ filtros.revista }}" placeholder="Revista">
+                {% elif filtros.criterio == 'palavras_chave' %}
+                    <label for="palavras_chave">Palavra-chave:</label>
+                    <input type="text" name="palavras_chave" id="palavras_chave" value="{{ filtros.palavras_chave }}" placeholder="Palavra-chave">
+                {% elif filtros.criterio == 'data' %}
+                    <label for="data">Data:</label>
+                    <input type="date" name="data" id="data" value="{{ filtros.data }}">
+                {% elif filtros.criterio == 'resumo' %}
+                    <label for="resumo">Resumo:</label>
+                    <input type="text" name="resumo" id="resumo" value="{{ filtros.resumo }}" placeholder="Resumo">
+                {% endif %}
+            {% endif %}
+        </div>
+
+        <label for="ordenar_por">Ordenar por:</label>
+        <select name="ordenar_por" id="ordenar_por">
+            <option value="data" {% if ordenar_por == 'data' %}selected{% endif %}>Data</option>
+            <option value="titulo" {% if ordenar_por == 'titulo' %}selected{% endif %}>Título</option>
+            <!-- Adicione outras opções de ordenação se necessário -->
+        </select>
+
+        <button type="submit">Buscar</button>
+    </form>
+</section>
+
+<section id="lista_artigos">
+    <h1>Lista de Artigos</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Título</th>
+                <th>Autor</th>
+                <th>Data de Publicação</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for artigo in artigos %}
+                <tr>
+                    <td><a href="{% url 'detalhes_artigo' artigo.id %}">{{ artigo.titulo }}</a></td>
+                    <td>{{ artigo.autores }}</td>
+                    <td>{{ artigo.data|date:"d/m/Y" }}</td>
+                </tr>
+            {% empty %}
+                <tr>
+                    <td colspan="3">Nenhum artigo encontrado.</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <div class="pagination">
+        {% if artigos.has_previous %}
+            <a href="?{% if filtros.criterio %}criterio={{ filtros.criterio }}{% endif %}&ordenar_por={{ ordenar_por }}&pagina=1">Primeira</a>
+            <a href="?{% if filtros.criterio %}criterio={{ filtros.criterio }}{% endif %}&ordenar_por={{ ordenar_por }}&pagina={{ artigos.previous_page_number }}">Anterior</a>
+        {% endif %}
+
+        <span class="current">Página {{ artigos.number }} de {{ artigos.paginator.num_pages }}</span>
+
+        {% if artigos.has_next %}
+            <a href="?{% if filtros.criterio %}criterio={{ filtros.criterio }}{% endif %}&ordenar_por={{ ordenar_por }}&pagina={{ artigos.next_page_number }}">Próxima</a>
+            <a href="?{% if filtros.criterio %}criterio={{ filtros.criterio }}{% endif %}&ordenar_por={{ ordenar_por }}&pagina={{ artigos.paginator.num_pages }}">Última</a>
+        {% endif %}
+    </div>
+</section>
+
+<script>
+    function mostrarCampo() {
+        var criterio = document.getElementById('criterio').value;
+        var campoCriterio = document.getElementById('campo_criterio');
+
+        var campos = {
+            'titulo': '<label for="titulo">Título:</label><input type="text" name="titulo" id="titulo" placeholder="Título">',
+            'autores': '<label for="autores">Autor:</label><input type="text" name="autores" id="autores" placeholder="Autor">',
+            'revista': '<label for="revista">Revista:</label><input type="text" name="revista" id="revista" placeholder="Revista">',
+            'palavras_chave': '<label for="palavras_chave">Palavra-chave:</label><input type="text" name="palavras_chave" id="palavras_chave" placeholder="Palavra-chave">',
+            'data': '<label for="data">Data:</label><input type="date" name="data" id="data">',
+            'resumo': '<label for="resumo">Resumo:</label><input type="text" name="resumo" id="resumo" placeholder="Resumo">'
+        };
+
+        campoCriterio.innerHTML = campos[criterio] || '';
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+        mostrarCampo();  // Inicializa o campo correto quando a página é carregada
+    });
+</script>
+</main>
+{% endblock %}
