@@ -15,15 +15,6 @@ class Artigo(models.Model):
     ultima_modificacao = models.DateTimeField(auto_now=True)
     autor = models.ForeignKey(User, on_delete=models.CASCADE, default=1)
 
-    class Meta:
-        permissions = [
-            ("pode_publicar", "Pode publicar artigos"),
-            ("pode_visualizar", "Pode visualizar artigos"),
-        ]
-
-    def __str__(self):
-        return self.titulo
-    
 class Auditoria(models.Model):
     # Defina os campos do modelo Auditoria
     usuario = models.ForeignKey(User, on_delete=models.CASCADE)

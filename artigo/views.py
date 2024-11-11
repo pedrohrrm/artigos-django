@@ -14,7 +14,7 @@ from django.contrib.auth.decorators import login_required, permission_required
 
 
 
-logger = logging.getLogger(__name__)
+logger = logging.getLogger('django')
 
 # Create your views here.
 def home(request):
@@ -83,7 +83,7 @@ def lista_artigos(request):
 def editar(request, artigo_id):
     artigo = get_object_or_404(Artigo, pk=artigo_id)
 
-    if request.user != artigo.autor and not request.user.has_perm('app.change_artigo'):
+    if request.user != artigo.autor and not request.user.has_perm('artigo.change_artigo'):
         return HttpResponse("Você não tem permissão para editar este artigo.")
     
     if request.method == 'POST':

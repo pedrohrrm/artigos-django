@@ -1,144 +1,364 @@
-Watching for file changes with StatReloader
-"GET / HTTP/1.1" 200 5375
-"POST /artigo/logout/ HTTP/1.1" 302 0
-"GET /artigo/login/ HTTP/1.1" 200 5196
-"GET / HTTP/1.1" 200 5064
-"GET /artigo/criar/ HTTP/1.1" 302 0
-"GET /artigo/login/?next=/artigo/criar/ HTTP/1.1" 200 5196
-"GET / HTTP/1.1" 200 5064
-"GET /artigo/lista_artigos/ HTTP/1.1" 302 0
-"GET /artigo/login/?next=/artigo/lista_artigos/ HTTP/1.1" 200 5196
-"GET / HTTP/1.1" 200 5064
-"GET /artigo/lista_artigos/ HTTP/1.1" 302 0
-"GET /artigo/login/?next=/artigo/lista_artigos/ HTTP/1.1" 200 5196
-"GET / HTTP/1.1" 200 5064
-"GET /artigo/lista_artigos/ HTTP/1.1" 302 0
-"GET /artigo/login/?next=/artigo/lista_artigos/ HTTP/1.1" 200 5196
-"GET / HTTP/1.1" 200 5064
-"GET /artigo/login/ HTTP/1.1" 200 5196
-"POST /artigo/login/ HTTP/1.1" 302 0
-"GET /artigo/ HTTP/1.1" 200 5379
-Forbidden (Permission denied): /artigo/criar/
+2024-11-11 01:51:23,940 INFO Watching for file changes with StatReloader
+2024-11-11 01:51:49,418 INFO Foi criado um artigo por gustavo
+2024-11-11 01:59:44,466 INFO /home/gustavo-vaz/Downloads/TPSD/Artigos-django/artigo/models.py changed, reloading.
+2024-11-11 01:59:44,763 INFO Watching for file changes with StatReloader
+2024-11-11 01:59:45,921 INFO /home/gustavo-vaz/Downloads/TPSD/Artigos-django/artigo/models.py changed, reloading.
+2024-11-11 01:59:46,166 INFO Watching for file changes with StatReloader
+2024-11-11 01:59:48,340 INFO /home/gustavo-vaz/Downloads/TPSD/Artigos-django/artigo/models.py changed, reloading.
+2024-11-11 01:59:48,585 INFO Watching for file changes with StatReloader
+2024-11-11 01:59:51,750 INFO /home/gustavo-vaz/Downloads/TPSD/Artigos-django/artigo/models.py changed, reloading.
+2024-11-11 01:59:52,022 INFO Watching for file changes with StatReloader
+2024-11-11 01:59:57,265 INFO /home/gustavo-vaz/Downloads/TPSD/Artigos-django/artigo/models.py changed, reloading.
+2024-11-11 01:59:57,552 INFO Watching for file changes with StatReloader
+2024-11-11 02:00:24,193 INFO Watching for file changes with StatReloader
+2024-11-11 02:00:34,508 INFO /home/gustavo-vaz/Downloads/TPSD/Artigos-django/artigo/models.py changed, reloading.
+2024-11-11 02:00:34,801 INFO Watching for file changes with StatReloader
+2024-11-11 02:00:47,079 INFO /home/gustavo-vaz/Downloads/TPSD/Artigos-django/artigo/admin.py changed, reloading.
+2024-11-11 02:00:47,340 INFO Watching for file changes with StatReloader
+2024-11-11 02:00:52,567 WARNING Not Found: /favicon.ico
+2024-11-11 02:00:58,600 INFO /home/gustavo-vaz/Downloads/TPSD/Artigos-django/artigo/admin.py changed, reloading.
+2024-11-11 02:00:58,863 INFO Watching for file changes with StatReloader
+2024-11-11 02:01:09,124 INFO /home/gustavo-vaz/Downloads/TPSD/Artigos-django/artigo/admin.py changed, reloading.
+2024-11-11 02:01:09,395 INFO Watching for file changes with StatReloader
+2024-11-11 02:01:14,600 INFO /home/gustavo-vaz/Downloads/TPSD/Artigos-django/artigo/admin.py changed, reloading.
+2024-11-11 02:01:14,857 INFO Watching for file changes with StatReloader
+2024-11-11 02:01:55,467 INFO /home/gustavo-vaz/Downloads/TPSD/Artigos-django/artigo/admin.py changed, reloading.
+2024-11-11 02:01:55,738 INFO Watching for file changes with StatReloader
+2024-11-11 02:02:16,205 INFO /home/gustavo-vaz/Downloads/TPSD/Artigos-django/artigo/admin.py changed, reloading.
+2024-11-11 02:02:16,462 INFO Watching for file changes with StatReloader
+2024-11-11 02:03:47,968 WARNING Forbidden (Permission denied): /artigo/criar/
 Traceback (most recent call last):
-  File "/home/gustavo-vaz/Downloads/TP SD/Artigos-django/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+  File "/home/gustavo-vaz/Downloads/TPSD/Artigos-django/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
     response = get_response(request)
                ^^^^^^^^^^^^^^^^^^^^^
-  File "/home/gustavo-vaz/Downloads/TP SD/Artigos-django/venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+  File "/home/gustavo-vaz/Downloads/TPSD/Artigos-django/venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
     response = wrapped_callback(request, *callback_args, **callback_kwargs)
                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/gustavo-vaz/Downloads/TP SD/Artigos-django/venv/lib/python3.12/site-packages/django/contrib/auth/decorators.py", line 60, in _view_wrapper
+  File "/home/gustavo-vaz/Downloads/TPSD/Artigos-django/venv/lib/python3.12/site-packages/django/contrib/auth/decorators.py", line 60, in _view_wrapper
     return view_func(request, *args, **kwargs)
            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/gustavo-vaz/Downloads/TP SD/Artigos-django/venv/lib/python3.12/site-packages/django/contrib/auth/decorators.py", line 57, in _view_wrapper
+  File "/home/gustavo-vaz/Downloads/TPSD/Artigos-django/venv/lib/python3.12/site-packages/django/contrib/auth/decorators.py", line 57, in _view_wrapper
     test_pass = test_func(request.user)
                 ^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/gustavo-vaz/Downloads/TP SD/Artigos-django/venv/lib/python3.12/site-packages/django/contrib/auth/decorators.py", line 130, in check_perms
+  File "/home/gustavo-vaz/Downloads/TPSD/Artigos-django/venv/lib/python3.12/site-packages/django/contrib/auth/decorators.py", line 130, in check_perms
     raise PermissionDenied
 django.core.exceptions.PermissionDenied
-"GET /artigo/criar/ HTTP/1.1" 403 135
-Forbidden (Permission denied): /admin/auth/user/4/change/
+2024-11-11 02:04:00,831 WARNING Forbidden (Permission denied): /artigo/artigos/21/editar/
 Traceback (most recent call last):
-  File "/home/gustavo-vaz/Downloads/TP SD/Artigos-django/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+  File "/home/gustavo-vaz/Downloads/TPSD/Artigos-django/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
     response = get_response(request)
                ^^^^^^^^^^^^^^^^^^^^^
-  File "/home/gustavo-vaz/Downloads/TP SD/Artigos-django/venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+  File "/home/gustavo-vaz/Downloads/TPSD/Artigos-django/venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
     response = wrapped_callback(request, *callback_args, **callback_kwargs)
                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/gustavo-vaz/Downloads/TP SD/Artigos-django/venv/lib/python3.12/site-packages/django/contrib/admin/options.py", line 718, in wrapper
-    return self.admin_site.admin_view(view)(*args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/gustavo-vaz/Downloads/TP SD/Artigos-django/venv/lib/python3.12/site-packages/django/utils/decorators.py", line 188, in _view_wrapper
-    result = _process_exception(request, e)
-             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/gustavo-vaz/Downloads/TP SD/Artigos-django/venv/lib/python3.12/site-packages/django/utils/decorators.py", line 186, in _view_wrapper
-    response = view_func(request, *args, **kwargs)
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/gustavo-vaz/Downloads/TP SD/Artigos-django/venv/lib/python3.12/site-packages/django/views/decorators/cache.py", line 80, in _view_wrapper
-    response = view_func(request, *args, **kwargs)
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/gustavo-vaz/Downloads/TP SD/Artigos-django/venv/lib/python3.12/site-packages/django/contrib/admin/sites.py", line 241, in inner
-    return view(request, *args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/gustavo-vaz/Downloads/TP SD/Artigos-django/venv/lib/python3.12/site-packages/django/contrib/admin/options.py", line 1964, in change_view
-    return self.changeform_view(request, object_id, form_url, extra_context)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/gustavo-vaz/Downloads/TP SD/Artigos-django/venv/lib/python3.12/site-packages/django/utils/decorators.py", line 48, in _wrapper
-    return bound_method(*args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/gustavo-vaz/Downloads/TP SD/Artigos-django/venv/lib/python3.12/site-packages/django/utils/decorators.py", line 188, in _view_wrapper
-    result = _process_exception(request, e)
-             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/gustavo-vaz/Downloads/TP SD/Artigos-django/venv/lib/python3.12/site-packages/django/utils/decorators.py", line 186, in _view_wrapper
-    response = view_func(request, *args, **kwargs)
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/gustavo-vaz/Downloads/TP SD/Artigos-django/venv/lib/python3.12/site-packages/django/contrib/admin/options.py", line 1820, in changeform_view
-    return self._changeform_view(request, object_id, form_url, extra_context)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/gustavo-vaz/Downloads/TP SD/Artigos-django/venv/lib/python3.12/site-packages/django/contrib/admin/options.py", line 1847, in _changeform_view
+  File "/home/gustavo-vaz/Downloads/TPSD/Artigos-django/venv/lib/python3.12/site-packages/django/contrib/auth/decorators.py", line 60, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gustavo-vaz/Downloads/TPSD/Artigos-django/venv/lib/python3.12/site-packages/django/contrib/auth/decorators.py", line 57, in _view_wrapper
+    test_pass = test_func(request.user)
+                ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gustavo-vaz/Downloads/TPSD/Artigos-django/venv/lib/python3.12/site-packages/django/contrib/auth/decorators.py", line 130, in check_perms
     raise PermissionDenied
 django.core.exceptions.PermissionDenied
-"GET /admin/auth/user/4/change/ HTTP/1.1" 403 135
-Forbidden (Permission denied): /admin/auth/user/
+2024-11-11 02:04:07,690 WARNING Forbidden (Permission denied): /artigo/excluir_artigo/18/
 Traceback (most recent call last):
-  File "/home/gustavo-vaz/Downloads/TP SD/Artigos-django/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+  File "/home/gustavo-vaz/Downloads/TPSD/Artigos-django/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
     response = get_response(request)
                ^^^^^^^^^^^^^^^^^^^^^
-  File "/home/gustavo-vaz/Downloads/TP SD/Artigos-django/venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+  File "/home/gustavo-vaz/Downloads/TPSD/Artigos-django/venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
     response = wrapped_callback(request, *callback_args, **callback_kwargs)
                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/gustavo-vaz/Downloads/TP SD/Artigos-django/venv/lib/python3.12/site-packages/django/contrib/admin/options.py", line 718, in wrapper
-    return self.admin_site.admin_view(view)(*args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/gustavo-vaz/Downloads/TP SD/Artigos-django/venv/lib/python3.12/site-packages/django/utils/decorators.py", line 188, in _view_wrapper
-    result = _process_exception(request, e)
-             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/gustavo-vaz/Downloads/TP SD/Artigos-django/venv/lib/python3.12/site-packages/django/utils/decorators.py", line 186, in _view_wrapper
-    response = view_func(request, *args, **kwargs)
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/gustavo-vaz/Downloads/TP SD/Artigos-django/venv/lib/python3.12/site-packages/django/views/decorators/cache.py", line 80, in _view_wrapper
-    response = view_func(request, *args, **kwargs)
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/gustavo-vaz/Downloads/TP SD/Artigos-django/venv/lib/python3.12/site-packages/django/contrib/admin/sites.py", line 241, in inner
-    return view(request, *args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/gustavo-vaz/Downloads/TP SD/Artigos-django/venv/lib/python3.12/site-packages/django/utils/decorators.py", line 48, in _wrapper
-    return bound_method(*args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/gustavo-vaz/Downloads/TP SD/Artigos-django/venv/lib/python3.12/site-packages/django/utils/decorators.py", line 188, in _view_wrapper
-    result = _process_exception(request, e)
-             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/gustavo-vaz/Downloads/TP SD/Artigos-django/venv/lib/python3.12/site-packages/django/utils/decorators.py", line 186, in _view_wrapper
-    response = view_func(request, *args, **kwargs)
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/gustavo-vaz/Downloads/TP SD/Artigos-django/venv/lib/python3.12/site-packages/django/contrib/admin/options.py", line 1998, in changelist_view
+  File "/home/gustavo-vaz/Downloads/TPSD/Artigos-django/venv/lib/python3.12/site-packages/django/contrib/auth/decorators.py", line 60, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gustavo-vaz/Downloads/TPSD/Artigos-django/venv/lib/python3.12/site-packages/django/contrib/auth/decorators.py", line 57, in _view_wrapper
+    test_pass = test_func(request.user)
+                ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gustavo-vaz/Downloads/TPSD/Artigos-django/venv/lib/python3.12/site-packages/django/contrib/auth/decorators.py", line 130, in check_perms
     raise PermissionDenied
 django.core.exceptions.PermissionDenied
-"GET /admin/auth/user/ HTTP/1.1" 403 135
-"GET /admin/ HTTP/1.1" 200 4577
-"GET /static/admin/css/dashboard.css HTTP/1.1" 304 0
-"POST /artigo/logout/ HTTP/1.1" 302 0
-"GET /artigo/login/ HTTP/1.1" 200 5196
-"POST /artigo/login/ HTTP/1.1" 302 0
-"GET /artigo/ HTTP/1.1" 200 5375
-"GET /admin/ HTTP/1.1" 200 8672
-"GET /static/admin/img/icon-changelink.svg HTTP/1.1" 304 0
-"GET /admin/auth/user/ HTTP/1.1" 200 14941
-"GET /static/admin/css/changelists.css HTTP/1.1" 304 0
-"GET /static/admin/img/icon-yes.svg HTTP/1.1" 304 0
-"GET /admin/jsi18n/ HTTP/1.1" 200 8959
-"GET /static/admin/js/filters.js HTTP/1.1" 304 0
-"GET /static/admin/img/tooltag-add.svg HTTP/1.1" 304 0
-"GET /static/admin/img/sorting-icons.svg HTTP/1.1" 304 0
-"GET /static/admin/img/icon-viewlink.svg HTTP/1.1" 304 0
-"GET /admin/auth/user/5/change/ HTTP/1.1" 200 24791
-"GET /admin/jsi18n/ HTTP/1.1" 200 8959
-"GET /admin/auth/user/ HTTP/1.1" 200 14941
-"GET /admin/auth/user/4/change/ HTTP/1.1" 200 24799
-"GET /admin/jsi18n/ HTTP/1.1" 200 8959
-"POST /admin/auth/user/4/change/ HTTP/1.1" 302 0
-"GET /admin/auth/user/ HTTP/1.1" 200 15142
-"GET /admin/jsi18n/ HTTP/1.1" 200 8959
-"GET /artigo/criar/ HTTP/1.1" 200 6804
-"POST /artigo/criar/ HTTP/1.1" 302 0
-"GET /artigo/lista_artigos/ HTTP/1.1" 200 10575
-/home/gustavo-vaz/Downloads/TP SD/Artigos-django/Artigos/settings.py changed, reloading.
+2024-11-11 02:06:34,058 WARNING Forbidden (Permission denied): /artigo/criar/
+Traceback (most recent call last):
+  File "/home/gustavo-vaz/Downloads/TPSD/Artigos-django/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gustavo-vaz/Downloads/TPSD/Artigos-django/venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gustavo-vaz/Downloads/TPSD/Artigos-django/venv/lib/python3.12/site-packages/django/contrib/auth/decorators.py", line 60, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gustavo-vaz/Downloads/TPSD/Artigos-django/venv/lib/python3.12/site-packages/django/contrib/auth/decorators.py", line 57, in _view_wrapper
+    test_pass = test_func(request.user)
+                ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gustavo-vaz/Downloads/TPSD/Artigos-django/venv/lib/python3.12/site-packages/django/contrib/auth/decorators.py", line 130, in check_perms
+    raise PermissionDenied
+django.core.exceptions.PermissionDenied
+2024-11-11 02:07:14,786 WARNING Forbidden (Permission denied): /artigo/criar/
+Traceback (most recent call last):
+  File "/home/gustavo-vaz/Downloads/TPSD/Artigos-django/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gustavo-vaz/Downloads/TPSD/Artigos-django/venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gustavo-vaz/Downloads/TPSD/Artigos-django/venv/lib/python3.12/site-packages/django/contrib/auth/decorators.py", line 60, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gustavo-vaz/Downloads/TPSD/Artigos-django/venv/lib/python3.12/site-packages/django/contrib/auth/decorators.py", line 57, in _view_wrapper
+    test_pass = test_func(request.user)
+                ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gustavo-vaz/Downloads/TPSD/Artigos-django/venv/lib/python3.12/site-packages/django/contrib/auth/decorators.py", line 130, in check_perms
+    raise PermissionDenied
+django.core.exceptions.PermissionDenied
+2024-11-11 02:07:41,591 WARNING Forbidden (CSRF token from POST incorrect.): /artigo/logout/
+2024-11-11 02:07:43,954 WARNING Forbidden (CSRF token from POST incorrect.): /artigo/logout/
+2024-11-11 02:07:45,740 WARNING Not Found: /]
+2024-11-11 02:07:57,942 WARNING Forbidden (Permission denied): /artigo/criar/
+Traceback (most recent call last):
+  File "/home/gustavo-vaz/Downloads/TPSD/Artigos-django/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gustavo-vaz/Downloads/TPSD/Artigos-django/venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gustavo-vaz/Downloads/TPSD/Artigos-django/venv/lib/python3.12/site-packages/django/contrib/auth/decorators.py", line 60, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gustavo-vaz/Downloads/TPSD/Artigos-django/venv/lib/python3.12/site-packages/django/contrib/auth/decorators.py", line 57, in _view_wrapper
+    test_pass = test_func(request.user)
+                ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gustavo-vaz/Downloads/TPSD/Artigos-django/venv/lib/python3.12/site-packages/django/contrib/auth/decorators.py", line 130, in check_perms
+    raise PermissionDenied
+django.core.exceptions.PermissionDenied
+2024-11-11 02:10:51,218 WARNING Forbidden (Permission denied): /artigo/artigos/18/editar/
+Traceback (most recent call last):
+  File "/home/gustavo-vaz/Downloads/TPSD/Artigos-django/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gustavo-vaz/Downloads/TPSD/Artigos-django/venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gustavo-vaz/Downloads/TPSD/Artigos-django/venv/lib/python3.12/site-packages/django/contrib/auth/decorators.py", line 60, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gustavo-vaz/Downloads/TPSD/Artigos-django/venv/lib/python3.12/site-packages/django/contrib/auth/decorators.py", line 57, in _view_wrapper
+    test_pass = test_func(request.user)
+                ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gustavo-vaz/Downloads/TPSD/Artigos-django/venv/lib/python3.12/site-packages/django/contrib/auth/decorators.py", line 130, in check_perms
+    raise PermissionDenied
+django.core.exceptions.PermissionDenied
+2024-11-11 02:11:54,753 INFO /home/gustavo-vaz/Downloads/TPSD/Artigos-django/artigo/views.py changed, reloading.
+2024-11-11 02:11:55,030 INFO Watching for file changes with StatReloader
+2024-11-11 02:12:17,789 WARNING Forbidden (Permission denied): /artigo/criar/
+Traceback (most recent call last):
+  File "/home/gustavo-vaz/Downloads/TPSD/Artigos-django/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gustavo-vaz/Downloads/TPSD/Artigos-django/venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gustavo-vaz/Downloads/TPSD/Artigos-django/venv/lib/python3.12/site-packages/django/contrib/auth/decorators.py", line 60, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gustavo-vaz/Downloads/TPSD/Artigos-django/venv/lib/python3.12/site-packages/django/contrib/auth/decorators.py", line 57, in _view_wrapper
+    test_pass = test_func(request.user)
+                ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gustavo-vaz/Downloads/TPSD/Artigos-django/venv/lib/python3.12/site-packages/django/contrib/auth/decorators.py", line 130, in check_perms
+    raise PermissionDenied
+django.core.exceptions.PermissionDenied
+2024-11-11 02:16:00,302 INFO /home/gustavo-vaz/Downloads/TPSD/Artigos-django/artigo/views.py changed, reloading.
+2024-11-11 02:16:00,572 INFO Watching for file changes with StatReloader
+2024-11-11 02:16:37,342 WARNING Forbidden (Permission denied): /artigo/criar/
+Traceback (most recent call last):
+  File "/home/gustavo-vaz/Downloads/TPSD/Artigos-django/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gustavo-vaz/Downloads/TPSD/Artigos-django/venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gustavo-vaz/Downloads/TPSD/Artigos-django/venv/lib/python3.12/site-packages/django/contrib/auth/decorators.py", line 60, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gustavo-vaz/Downloads/TPSD/Artigos-django/venv/lib/python3.12/site-packages/django/contrib/auth/decorators.py", line 57, in _view_wrapper
+    test_pass = test_func(request.user)
+                ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gustavo-vaz/Downloads/TPSD/Artigos-django/venv/lib/python3.12/site-packages/django/contrib/auth/decorators.py", line 130, in check_perms
+    raise PermissionDenied
+django.core.exceptions.PermissionDenied
+2024-11-11 02:16:47,199 INFO /home/gustavo-vaz/Downloads/TPSD/Artigos-django/artigo/views.py changed, reloading.
+2024-11-11 02:16:47,461 INFO Watching for file changes with StatReloader
+2024-11-11 02:16:52,868 WARNING Forbidden (Permission denied): /artigo/criar/
+Traceback (most recent call last):
+  File "/home/gustavo-vaz/Downloads/TPSD/Artigos-django/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gustavo-vaz/Downloads/TPSD/Artigos-django/venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gustavo-vaz/Downloads/TPSD/Artigos-django/venv/lib/python3.12/site-packages/django/contrib/auth/decorators.py", line 60, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gustavo-vaz/Downloads/TPSD/Artigos-django/venv/lib/python3.12/site-packages/django/contrib/auth/decorators.py", line 57, in _view_wrapper
+    test_pass = test_func(request.user)
+                ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gustavo-vaz/Downloads/TPSD/Artigos-django/venv/lib/python3.12/site-packages/django/contrib/auth/decorators.py", line 130, in check_perms
+    raise PermissionDenied
+django.core.exceptions.PermissionDenied
+2024-11-11 02:18:24,483 INFO /home/gustavo-vaz/Downloads/TPSD/Artigos-django/artigo/urls.py changed, reloading.
+2024-11-11 02:18:24,757 INFO Watching for file changes with StatReloader
+2024-11-11 02:18:26,926 INFO /home/gustavo-vaz/Downloads/TPSD/Artigos-django/artigo/urls.py changed, reloading.
+2024-11-11 02:18:27,243 INFO Watching for file changes with StatReloader
+2024-11-11 02:18:28,911 WARNING Forbidden (Permission denied): /artigo/criar/
+Traceback (most recent call last):
+  File "/home/gustavo-vaz/Downloads/TPSD/Artigos-django/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gustavo-vaz/Downloads/TPSD/Artigos-django/venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gustavo-vaz/Downloads/TPSD/Artigos-django/venv/lib/python3.12/site-packages/django/contrib/auth/decorators.py", line 60, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gustavo-vaz/Downloads/TPSD/Artigos-django/venv/lib/python3.12/site-packages/django/contrib/auth/decorators.py", line 57, in _view_wrapper
+    test_pass = test_func(request.user)
+                ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gustavo-vaz/Downloads/TPSD/Artigos-django/venv/lib/python3.12/site-packages/django/contrib/auth/decorators.py", line 130, in check_perms
+    raise PermissionDenied
+django.core.exceptions.PermissionDenied
+2024-11-11 02:18:51,664 INFO /home/gustavo-vaz/Downloads/TPSD/Artigos-django/artigo/urls.py changed, reloading.
+2024-11-11 02:18:51,947 INFO Watching for file changes with StatReloader
+2024-11-11 02:18:53,153 INFO /home/gustavo-vaz/Downloads/TPSD/Artigos-django/artigo/urls.py changed, reloading.
+2024-11-11 02:18:53,417 INFO Watching for file changes with StatReloader
+2024-11-11 02:19:52,119 INFO /home/gustavo-vaz/Downloads/TPSD/Artigos-django/artigo/views.py changed, reloading.
+2024-11-11 02:19:52,398 INFO Watching for file changes with StatReloader
+2024-11-11 02:19:56,596 INFO /home/gustavo-vaz/Downloads/TPSD/Artigos-django/artigo/urls.py changed, reloading.
+2024-11-11 02:19:56,903 INFO Watching for file changes with StatReloader
+2024-11-11 02:19:59,621 WARNING Forbidden (Permission denied): /artigo/artigos/13/editar/
+Traceback (most recent call last):
+  File "/home/gustavo-vaz/Downloads/TPSD/Artigos-django/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gustavo-vaz/Downloads/TPSD/Artigos-django/venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gustavo-vaz/Downloads/TPSD/Artigos-django/venv/lib/python3.12/site-packages/django/contrib/auth/decorators.py", line 60, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gustavo-vaz/Downloads/TPSD/Artigos-django/venv/lib/python3.12/site-packages/django/contrib/auth/decorators.py", line 57, in _view_wrapper
+    test_pass = test_func(request.user)
+                ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gustavo-vaz/Downloads/TPSD/Artigos-django/venv/lib/python3.12/site-packages/django/contrib/auth/decorators.py", line 130, in check_perms
+    raise PermissionDenied
+django.core.exceptions.PermissionDenied
+2024-11-11 02:20:06,158 INFO /home/gustavo-vaz/Downloads/TPSD/Artigos-django/artigo/urls.py changed, reloading.
+2024-11-11 02:20:06,443 INFO Watching for file changes with StatReloader
+2024-11-11 02:20:08,219 WARNING Forbidden (Permission denied): /artigo/artigos/13/editar/
+Traceback (most recent call last):
+  File "/home/gustavo-vaz/Downloads/TPSD/Artigos-django/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gustavo-vaz/Downloads/TPSD/Artigos-django/venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gustavo-vaz/Downloads/TPSD/Artigos-django/venv/lib/python3.12/site-packages/django/contrib/auth/decorators.py", line 60, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gustavo-vaz/Downloads/TPSD/Artigos-django/venv/lib/python3.12/site-packages/django/contrib/auth/decorators.py", line 60, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gustavo-vaz/Downloads/TPSD/Artigos-django/venv/lib/python3.12/site-packages/django/contrib/auth/decorators.py", line 60, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gustavo-vaz/Downloads/TPSD/Artigos-django/venv/lib/python3.12/site-packages/django/contrib/auth/decorators.py", line 57, in _view_wrapper
+    test_pass = test_func(request.user)
+                ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gustavo-vaz/Downloads/TPSD/Artigos-django/venv/lib/python3.12/site-packages/django/contrib/auth/decorators.py", line 130, in check_perms
+    raise PermissionDenied
+django.core.exceptions.PermissionDenied
+2024-11-11 02:20:20,790 INFO /home/gustavo-vaz/Downloads/TPSD/Artigos-django/artigo/views.py changed, reloading.
+2024-11-11 02:20:21,084 INFO Watching for file changes with StatReloader
+2024-11-11 02:20:32,409 INFO /home/gustavo-vaz/Downloads/TPSD/Artigos-django/artigo/views.py changed, reloading.
+2024-11-11 02:20:32,692 INFO Watching for file changes with StatReloader
+2024-11-11 02:20:34,505 WARNING Forbidden (Permission denied): /artigo/artigos/13/editar/
+Traceback (most recent call last):
+  File "/home/gustavo-vaz/Downloads/TPSD/Artigos-django/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gustavo-vaz/Downloads/TPSD/Artigos-django/venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gustavo-vaz/Downloads/TPSD/Artigos-django/venv/lib/python3.12/site-packages/django/contrib/auth/decorators.py", line 60, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gustavo-vaz/Downloads/TPSD/Artigos-django/venv/lib/python3.12/site-packages/django/contrib/auth/decorators.py", line 60, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gustavo-vaz/Downloads/TPSD/Artigos-django/venv/lib/python3.12/site-packages/django/contrib/auth/decorators.py", line 60, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gustavo-vaz/Downloads/TPSD/Artigos-django/venv/lib/python3.12/site-packages/django/contrib/auth/decorators.py", line 57, in _view_wrapper
+    test_pass = test_func(request.user)
+                ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gustavo-vaz/Downloads/TPSD/Artigos-django/venv/lib/python3.12/site-packages/django/contrib/auth/decorators.py", line 130, in check_perms
+    raise PermissionDenied
+django.core.exceptions.PermissionDenied
+2024-11-11 02:20:41,976 INFO /home/gustavo-vaz/Downloads/TPSD/Artigos-django/artigo/views.py changed, reloading.
+2024-11-11 02:20:42,231 INFO Watching for file changes with StatReloader
+2024-11-11 02:20:51,462 INFO /home/gustavo-vaz/Downloads/TPSD/Artigos-django/artigo/views.py changed, reloading.
+2024-11-11 02:20:51,734 INFO Watching for file changes with StatReloader
+2024-11-11 02:21:18,873 WARNING Forbidden (Permission denied): /artigo/criar/
+Traceback (most recent call last):
+  File "/home/gustavo-vaz/Downloads/TPSD/Artigos-django/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gustavo-vaz/Downloads/TPSD/Artigos-django/venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gustavo-vaz/Downloads/TPSD/Artigos-django/venv/lib/python3.12/site-packages/django/contrib/auth/decorators.py", line 60, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gustavo-vaz/Downloads/TPSD/Artigos-django/venv/lib/python3.12/site-packages/django/contrib/auth/decorators.py", line 57, in _view_wrapper
+    test_pass = test_func(request.user)
+                ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gustavo-vaz/Downloads/TPSD/Artigos-django/venv/lib/python3.12/site-packages/django/contrib/auth/decorators.py", line 130, in check_perms
+    raise PermissionDenied
+django.core.exceptions.PermissionDenied
+2024-11-11 02:21:36,343 INFO /home/gustavo-vaz/Downloads/TPSD/Artigos-django/artigo/views.py changed, reloading.
+2024-11-11 02:21:36,619 INFO Watching for file changes with StatReloader
+2024-11-11 02:21:37,664 WARNING Forbidden (Permission denied): /artigo/criar/
+Traceback (most recent call last):
+  File "/home/gustavo-vaz/Downloads/TPSD/Artigos-django/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gustavo-vaz/Downloads/TPSD/Artigos-django/venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gustavo-vaz/Downloads/TPSD/Artigos-django/venv/lib/python3.12/site-packages/django/contrib/auth/decorators.py", line 60, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gustavo-vaz/Downloads/TPSD/Artigos-django/venv/lib/python3.12/site-packages/django/contrib/auth/decorators.py", line 57, in _view_wrapper
+    test_pass = test_func(request.user)
+                ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gustavo-vaz/Downloads/TPSD/Artigos-django/venv/lib/python3.12/site-packages/django/contrib/auth/decorators.py", line 130, in check_perms
+    raise PermissionDenied
+django.core.exceptions.PermissionDenied
+2024-11-11 02:22:06,083 INFO /home/gustavo-vaz/Downloads/TPSD/Artigos-django/artigo/urls.py changed, reloading.
+2024-11-11 02:22:06,400 INFO Watching for file changes with StatReloader
+2024-11-11 02:22:21,754 INFO /home/gustavo-vaz/Downloads/TPSD/Artigos-django/artigo/urls.py changed, reloading.
+2024-11-11 02:22:22,006 INFO Watching for file changes with StatReloader
+2024-11-11 02:22:44,346 INFO /home/gustavo-vaz/Downloads/TPSD/Artigos-django/artigo/urls.py changed, reloading.
+2024-11-11 02:22:44,655 INFO Watching for file changes with StatReloader
+2024-11-11 02:22:45,774 INFO /home/gustavo-vaz/Downloads/TPSD/Artigos-django/artigo/urls.py changed, reloading.
+2024-11-11 02:22:46,026 INFO Watching for file changes with StatReloader
+2024-11-11 02:23:00,358 INFO /home/gustavo-vaz/Downloads/TPSD/Artigos-django/artigo/urls.py changed, reloading.
+2024-11-11 02:23:00,613 INFO Watching for file changes with StatReloader
+2024-11-11 02:24:42,611 INFO /home/gustavo-vaz/Downloads/TPSD/Artigos-django/artigo/models.py changed, reloading.
+2024-11-11 02:24:42,934 INFO Watching for file changes with StatReloader
+2024-11-11 02:26:13,748 INFO Artigo excluído por gustavo.vaz - ID: 13
+2024-11-11 02:26:18,743 INFO Artigo excluído por gustavo.vaz - ID: 14
+2024-11-11 02:26:22,775 INFO Artigo excluído por gustavo.vaz - ID: 20
+2024-11-11 02:26:31,272 INFO Artigo excluído por gustavo.vaz - ID: 40
+2024-11-11 02:26:41,221 INFO Artigo editado por gustavo.vaz - ID: 26
+2024-11-11 02:27:23,277 INFO Foi criado um artigo por gustavo.vaz
+2024-11-11 02:27:27,415 INFO Artigo baixado por gustavo.vaz - ID: 41

@@ -171,19 +171,27 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 LOGGING = {
     'version': 1,
-    'disable_existing_loggers': True,
+    'disable_existing_loggers': False,
     'handlers': {
         'file': {
-            'level': 'DEBUG',
+            'level': 'INFO',  # Define o nível como INFO
             'class': 'logging.FileHandler',
-            'filename': '/home/gustavo-vaz/Downloads/TP SD/Artigos-django/logs/meuapp.log',
+            'filename': '/home/gustavo-vaz/Downloads/TPSD/Artigos-django/logs/django.log',
+            'formatter': 'simple',
+        },
+    },
+    'formatters': {
+        'simple': {
+            'format': '{asctime} {levelname} {message}',
+            'style': '{',
         },
     },
     'loggers': {
-        '__name__': {  # Nome do logger específico
+        '': {  # Logger raiz
             'handlers': ['file'],
-            'level': 'DEBUG',
-            'propagate': False,  # Evita que esses logs se propaguem para outros loggers
+            'level': 'INFO',  # Configura o nível para INFO
+            'propagate': False,
         },
     },
 }
+
