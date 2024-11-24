@@ -167,30 +167,23 @@ LOGIN_REDIRECT_URL = 'home'  # Redireciona para a página inicial
 LOGIN_URL = 'login'          # URL padrão para a página de login
 LOGOUT_REDIRECT_URL = 'login' # URL para redirecionamento após logout
 
-BASE_DIR = Path(__file__).resolve().parent.parent
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 LOGGING = {
     'version': 1,
     'disable_existing_loggers': False,
     'handlers': {
         'file': {
-            'level': 'INFO',  # Define o nível como INFO
+            'level': 'DEBUG',
             'class': 'logging.FileHandler',
-            'filename': '/home/gustavo-vaz/Downloads/TPSD/Artigos-django/logs/django.log',
-            'formatter': 'simple',
-        },
-    },
-    'formatters': {
-        'simple': {
-            'format': '{asctime} {levelname} {message}',
-            'style': '{',
+            'filename': os.path.join(BASE_DIR, 'logs/django.log'),
         },
     },
     'loggers': {
-        '': {  # Logger raiz
+        'django': {
             'handlers': ['file'],
-            'level': 'INFO',  # Configura o nível para INFO
-            'propagate': False,
+            'level': 'DEBUG',
+            'propagate': True,
         },
     },
 }
