@@ -123,7 +123,6 @@
         background-color: #0056b3;
       }
       </style>
-
 </head>
 
 <body>
@@ -198,22 +197,26 @@
   <button id="chat-button" onclick="toggleChat()">💬</button>
 
   <script>
-    if (event.type === 'keydown' && event.key !== 'Enter') return;
+    // Alternar a exibição do chatbot
     function toggleChat() {
       const chatWidget = document.getElementById('chat-widget');
       chatWidget.style.display = chatWidget.style.display === 'none' ? 'block' : 'none';
     }
-
-    function sendMessage() {
-      const userInput = document.getElementById('user-input').value;
+  
+    // Enviar mensagem com o botão ou tecla Enter
+    function sendMessage(event) {
+      // Verifica se foi pressionado Enter ou clicado no botão
+      if (event.type === 'keydown' && event.key !== 'Enter') return;
+  
+      const userInput = document.getElementById('user-input').value.trim();
       const chatContent = document.getElementById('chat-content');
-
-      if (userInput.trim() === '') return;
-
+  
+      if (userInput === '') return;
+  
       // Adiciona mensagem do usuário
       chatContent.innerHTML += `<div class="message user"><strong>Você:</strong> ${userInput}</div>`;
       document.getElementById('user-input').value = '';
-
+  
       // Envia mensagem para o backend
       fetch('/chatbot-response/', {
         method: 'POST',
@@ -222,15 +225,18 @@
       })
         .then(response => response.json())
         .then(data => {
+          // Adiciona resposta do bot
           chatContent.innerHTML += `<div class="message bot"><strong>Bot:</strong> ${data.response}</div>`;
-          chatContent.scrollTop = chatContent.scrollHeight; // Rola automaticamente
+          chatContent.scrollTop = chatContent.scrollHeight; // Rola para a última mensagem
         })
-        .catch(error => {
-          chatContent.innerHTML += `<div class="message bot"><strong>Bot:</strong> Ocorreu um erro. Tente novamente mais tarde.</div>`;
+        .catch(() => {
+          chatContent.innerHTML += `<div class="message bot"><strong>Bot:</strong> Não consegui responder agora. Tente novamente mais tarde.</div>`;
         });
     }
+  
+    // Adiciona evento de tecla Enter
+    document.getElementById('user-input').addEventListener('keydown', sendMessage);
   </script>
-
   {% block content %}
   {% endblock %}
 </body>
